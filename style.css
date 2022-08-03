@@ -1,85 +1,50 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  background: #222;
-  background-image: url('https://source.unsplash.com/1600x900/?landscape');
-  font-size: 120%;
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
 }
-
+.container {
+  margin-top: 2rem;
+  max-width: 25rem;
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  border-radius: 10px;
+  box-shadow: 1px 2px 10px #ccc;
+}
+#weatherwidget {
+  min-height: 18rem;
+  background: #fff;
+  border-radius: 5px;
+}
 .card {
-  background: #000000d0;
-  color: white;
-  padding: 2em;
-  border-radius: 30px;
   width: 100%;
-  max-width: 420px;
-  margin: 1em;
 }
-.search {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.card .card-subtitle {
+  font-size: 4rem;
 }
-
-button {
-  margin: 0.5em;
-  border-radius: 50%;
-  border: none;
-  height: 44px;
-  width: 44px;
-  outline: none;
-  background: #7c7c7c2b;
-  color: white;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
-}
-
-input.search-bar {
-  border: none;
-  outline: none;
-  padding: 0.4em 1em;
-  border-radius: 24px;
-  background: #7c7c7c2b;
-  color: white;
-  font-family: inherit;
-  font-size: 105%;
-  width: calc(100% - 100px);
-}
-
-button:hover {
-  background: #7c7c7c6b;
-}
-
-h1.temp {
-  margin: 0;
-  margin-bottom: 0.4em;
-}
-
-.flex {
-  display: flex;
-  align-items: center;
-}
-
-.description {
-  text-transform: capitalize;
-  margin-left: 8px;
-}
-
-.weather.loading {
-  visibility: hidden;
-  max-height: 20px;
-  position: relative;
-}
-
-.weather.loading:after {
-  visibility: visible;
-  content: "Loading...";
-  color: white;
+.card .cel:after {
+  content: "°C";
   position: absolute;
-  top: 0;
-  left: 20px;
+  font-size: 2.5rem;
+  margin-top: 0.3rem;
+  font-weight: 400;
+}
+.card .far:after {
+  content: "°F";
+  position: absolute;
+  font-size: 2.5rem;
+  margin-top: 0.3rem;
+  font-weight: 400;
+}
+.units a {
+  color: #666;
+  text-decoration: none;
+}
+.units a.active {
+  color: #ccc;
 }
